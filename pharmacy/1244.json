@@ -57,25 +57,24 @@
 				{ "image": "http://media.app4.io/pharmacy/images/App4-3.png" },
 				{ "image": "http://media.app4.io/pharmacy/images/App4-4.png" }		
 			],
-			
 	"bannerSettings": {			
-		height: 125,
-		width: Alloy.Globals.Platform.Width,
-		scale: true,
-		auto: true,
-		backgroundColor: "#262626",
-		top: 0,
-		navigation: {
-			opacity: .2,
-			onTop: false,
-			style: viewscrollr.NAV_STYLE.CIRCLE,
-			selectedColor: "#fff",
-			color: "#000",
-			showBorder: true,
-			borderColor: "#000",
-			backgroundColor: "#000"
+		"height": "125",
+		"width": "Alloy.Globals.Platform.Width",
+		"scale": "true",
+		"auto": "true",
+		"backgroundColor": "#262626",
+		"top": "0",
+		"navigation": {
+			"opacity": ".2",
+			"onTop": "false",
+			"style": "viewscrollr.NAV_STYLE.CIRCLE",
+			"selectedColor": "#fff",
+			"color": "#000",
+			"showBorder": "true",
+			"borderColor": "#000",
+			"backgroundColor": "#000"
 		},
-		slides: [ 
+		"slides": [ 
 					{ "image": "http://media.app4.io/pharmacy/images/App4-1.png" },
 					{ "image": "http://media.app4.io/pharmacy/images/App4-3.png" },
 					{ "image": "http://media.app4.io/pharmacy/images/App4-4.png" }		
