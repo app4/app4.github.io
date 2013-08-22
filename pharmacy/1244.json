@@ -66,7 +66,7 @@
 		"top": 0,
 		"navigation": {
 			"opacity": .2,
-			"onTop": false,
+			"onTop": "false",
 			"style": viewscrollr.NAV_STYLE.CIRCLE,
 			"selectedColor": "#fff",
 			"color": "#000",
