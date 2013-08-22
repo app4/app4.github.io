@@ -53,9 +53,9 @@
 		
 	},
 	"banners": [ 
-				{ "image": "http://media.app4.io/pharmacy/images/App4-1.png" },
-				{ "image": "http://media.app4.io/pharmacy/images/App4-3.png" },
-				{ "image": "http://media.app4.io/pharmacy/images/App4-4.png" }		
+				{ "image": "http://media.app4.io/pharmacy/images/demo-banner1.png" },
+				{ "image": "http://media.app4.io/pharmacy/images/demo-banner2.png" },
+				{ "image": "http://media.app4.io/pharmacy/images/demo-banner3.png" }		
 			],
 	
 
