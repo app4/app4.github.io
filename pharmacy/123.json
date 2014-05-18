@@ -74,7 +74,7 @@
         "dataMasterspeed": 700,
         "dataDelay": 9400,
         "dataThumb": "assets/img/sliders/revolution/thumbs/thumb2.jpg",
-        "mainImage": "http://media.app4.io/pharmacy/images/demo-banner1.png",
+        "mainImage": "/Content/images/bg9.jpg",
         "layers": [
           {
             "classString": "caption lft slide_title slide_item_left",
@@ -135,7 +135,7 @@
         "dataMasterspeed": 700,
         "dataDelay": 9400,
         "dataThumb": "assets/img/sliders/revolution/thumbs/thumb2.jpg",
-        "mainImage": "http://media.app4.io/pharmacy/images/demo-banner1.png",
+        "mainImage": "/Content/images/bg9.jpg",
         "layers": [
           {
             "classString": "caption lft slide_title slide_item_left",
