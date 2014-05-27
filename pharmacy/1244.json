@@ -32,9 +32,9 @@
 		"altBackgroundColor2": "white",
 		"altBackgroundColor3": "white",
 		"textColor": "white",
-		"altTextColor1": "black",
-		"altTextColor2": "black",
-		"altTextColor3": "black",
+	    "altTextColor1": "#838383",
+	    "altTextColor2": "white",
+	    "altTextColor3": "white",
 		"appleStoreUrl": "https://itunes.apple.com/us/app/app4-rx-pharmacy-app-for-mobile/id690542484?ls=1&mt=8",
 		"googleStoreUrl": "http://play.google.com",
 		"refill": {
