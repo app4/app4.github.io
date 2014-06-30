@@ -40,7 +40,7 @@
 		"googleStoreUrl": "http://play.google.com",
 		"refill": {
 			"service": "RxRefill",
-			"url": "http://api2.rxrefill.net",			
+			"url": "http://api.rxrefill.net",			
 			"rxRefill":{
 				"storePin":"1244",
 				"apiToken":""
