@@ -1,6 +1,7 @@
 {
     "id": "7066735211",
     "name": "Tunnel Hill Pharmacy",
+    "email": "info@tunnelhillpharmacy.com",
 	"mapUrl": "http://maps.google.com/?",
 	"staticMapUrl2": "http://maps.google.com/maps/api/staticmap?markers=3535+Chattanooga%20Rd%20Tunnel%20Hill,%20GA%20%2030755&path=color:0x0000FF80|weight:5|34.85037,-85.04062&size=500x300&sensor=false",
 	"staticMapUrl": "http://media.app4.io/pharmacy/images/tunnelhill_map.png",
