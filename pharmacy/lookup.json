@@ -4,7 +4,8 @@
     "name": "Tunnel Hill Pharmacy",
     "urls": [
       "www.tunnelhillpharmacy.com",
-      "tunnelhillpharmacy.com"
+      "tunnelhillpharmacy.com",
+      "localhost:8080"
     ]
   }
 ]
