@@ -5,7 +5,8 @@
     "urls": [
       "www.tunnelhillpharmacy.com",
       "tunnelhillpharmacy.com",
-      "localhost:8080"
+      "localhost:8080",
+      "localhost:8090"
     ]
   }
 ]
