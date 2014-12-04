@@ -24,23 +24,26 @@
     "friday": "9am - 6pm",
     "saturday": "9am - 2pm"
   },
+  "twitterUrl": null,
+  "googlePlusUrl": null,
+  "facebookUrl": null,
   "webBanners": [
     {
       "title": "25 Years of Experience in Pharmacy Care",
       "image": "images/slideshow/slide1.jpg",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla ligula aliquet ut. Maecenas sed justo varius velit imperdiet bibendum. Stet clita kasd gubergren, no sea takimata sanctus est dolor sit amet."
     },
-        {
+    {
       "title": "We Offer a Wide Range of Pharmacy Services",
       "image": "images/slideshow/slide2.jpg",
-      "description": "Vivamus nec sapien massa, a imperdiet diam. Aliquam erat volutpat. Sed consectetur suscipit nunc et rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla ligula aliquet ut. Fusce et neque quis."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla ligula aliquet ut. Maecenas sed justo varius velit imperdiet bibendum. Stet clita kasd gubergren, no sea takimata sanctus est dolor sit amet."
     },
-        {
+    {
       "title": "Not Settling for Below Your Full Satisfaction",
       "image": "images/slideshow/slide3.jpg",
-      "description": "Phasellus leo ante, posuere in fringilla vitae, pretium at dui. Fusce et neque quis odio gravida auctor vel non mauris. Vivamus gravida aliquet eros. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren. Lorem ipsum dolor sit."
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo tristique odio, quis fringilla ligula aliquet ut. Maecenas sed justo varius velit imperdiet bibendum. Stet clita kasd gubergren, no sea takimata sanctus est dolor sit amet."
     }
-    ],
+  ],
   "about": "Tunnel Hill Pharmacy first opened in 1969 and is still an independent, community centered, retail pharmacy today. Tunnel Hill Pharmacy focuses on offering high quality, cost effective prescriptions made in the USA and superior customer service.  We are located in the Shop Rite plaza at the intersection of Hwy 2 and Chattanooga Rd, next to Tunnel Hill Walk-In Medical Center.    \n\nCutomer Quote: One long-time customer is quoted as saying that, 'We feel comfortable coming to the pharmacy because we're used to it'. Our customers are important to us and we offer pure, uncontaminated medicine at competitive prices, efficient, friendly service, and a welcoming environment. \n\nGenerations:  Several families have been such long-time, dedicated customers that Tunnel Hill Pharmacy  is still serving them after three generations!",
   "settings": {
     "backgroundImage2": "/images/pharmacy.png",
