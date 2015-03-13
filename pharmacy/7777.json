@@ -62,7 +62,7 @@
       "service": "RxRefill",
       "url": "http://api.rxrefill.net",
       "rxRefill": {
-        "storePin": "1244",
+        "storePin": "1246",
         "apiToken": ""
       },
       "email": {
