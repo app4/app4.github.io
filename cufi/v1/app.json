@@ -1,0 +1,940 @@
+{
+    "id": "12345",
+    "name": "app-name",
+    "init":
+    {
+        "items":
+        [
+            "clearcache",
+            "setalarm1",
+            "setalarm2"
+        ]
+    },
+    "actions":
+    {
+        "items":
+        [
+            {
+                "id": "launch",
+                "command": "nav::screen::home2_screen"
+            },
+            {
+                "id": "clearcache",
+                "command": "cache::removeAll"
+            },
+
+            {
+                "id": "setalarm2",
+                "command": "delay::30000::alarm::createAlarm::alarm_pray1"
+            },
+            {
+                "id": "setalarm1",
+                "command": "delay::20000::alarm::createAlarm::alarm_test1"
+            }
+        ]
+    },
+    "themes":
+    {
+        "default": "_defaultTheme",
+        "items":
+        [
+            {
+                "id": "_defaultTheme",
+                "windowBackgroundColor": "#E7E7E7",
+                "backgroundColor": "#E7E7E7",
+                "accentColor1": "#090340",
+                "foregroundColor": "black",
+                "backgroundImage": "/images/hero/backgrounds/blur-308328-1080x1920.jpg"
+            }
+        ]
+    },
+    "alarms":
+    {
+        "items":
+        [
+            {
+                "name": "alarm_pray1",
+                "title": "Christians United for Israel",
+                "message": "Pray for the Peace of Jerusalem",
+                "date": "Friday 12pm",
+                "sound": "/audio/hero/notification_chime.mp3",
+                "repeat": "weekly",
+                "overwrite": true,
+                "delay": 30000,
+                "userInfo":
+                {
+                    "screen": "pray_for_peace_screen",
+                    "dialogTitle": "CUFI Reminder"
+                }
+            },
+            {
+                "name": "alarm_test1",
+                "title": "Christians United for Israel",
+                "message": "We are setting up a reminder for you to Pray for the Peace of Jerusalem.  You can control notifications in your phone settings.",
+                "date": "in 5 seconds",
+                "sound": "/audio/hero/notification_chime.mp3",
+                "repeat": "once",
+                "delay": 20000,
+                "overwrite": false,
+                "userInfo":
+                {
+                    "screen": "pray_for_peace_screen",
+                    "dialogTitle": "Thank you installing!"
+                }
+            }
+        ]
+
+
+    },
+    "screens":
+    {
+        "items":
+        [
+            {
+                "id": "home2_screen",
+                "type": "page",
+                "layout": "vertical",
+                "header":
+                {
+                    "padding": "0 0 15 0",
+                    "children":
+                    [
+                        {
+                            "type": "applicationBar",
+                            "title": "CUFI",
+                            "subtitle": "Christians United for Israel",
+                            "top": 0,
+                            "leftButton": "back2"
+                        }
+                    ]
+                },
+                "body":
+                {
+                    "scrollable": true,
+                    "children":
+                    [
+                        {
+                            "id": "header_image",
+                            "type": "image",
+                            "width": "fill",
+                            "height": "aspect",
+                            "imageUrl": "/images/cufi/headers/Header_640x240.png",
+                            "aspectRatio": 2.6667
+                        },
+                        {
+                            "id": "home_flexbox",
+                            "type": "hero/container",
+                            "layout": "flex",
+                            "flex_basis": "30%",
+                            "flex_direction": "row",
+                            "justify_content": "space-around",
+                            "flex_wrap": "wrap",
+                            "flex_padding": "15",
+                            "childStyle":
+                            {
+                                "type": "container",
+                                "flex_grow": 1,
+                                "height": "auto",
+                                "layout": "vertical"
+
+
+                            },
+                            "children":
+                            [
+                                {
+                                    "id": "about_us",
+                                    "action": "nav::screen::about_us_screen",
+                                    "children":
+                                    [
+                                        {
+                                            "type": "image",
+                                            "imageUrl": "images/cufi/icons/about_us.png",
+                                            "aspectRatio": 1,
+                                            "width": "fill",
+                                            "top": 0,
+                                            "padding": { "left": "8%", "right": "8%" }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "titleText": "About\nUs",
+                                            "titleSize": 14,
+                                            "top": 5
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "id": "pray_for_peace",
+                                    "action": "nav::screen::pray_for_peace_screen",
+                                    "children":
+                                    [
+
+                                        {
+                                            "type": "image",
+                                            "imageUrl": "images/cufi/icons/peace.png",
+                                            "aspectRatio": 1,
+                                            "width": "fill",
+                                            "top": 0,
+                                            "padding": { "left": "8%", "right": "8%" }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "titleText": "Pray for\nPeace",
+                                            "titleSize": 14,
+                                            "top": 5
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "id": "contact_us",
+                                    "action": "nav::screen::contact_us_screen",
+                                    "children":
+                                    [
+
+                                        {
+                                            "type": "image",
+                                            "imageUrl": "images/cufi/icons/contact.png",
+                                            "aspectRatio": 1,
+                                            "width": "fill",
+                                            "top": 0,
+                                            "padding": { "left": "8%", "right": "8%" }
+                                        },
+                                        {
+                                            "type": "text",
+                                            "titleText": "Contact\nUs",
+                                            "titleSize": 14,
+                                            "top": 5
+                                        }
+                                    ]
+
+                                }
+
+
+                            ]
+                        }
+
+                    ]
+                },
+                "footer":
+                {
+                    "children":
+                    [
+                        {
+                            "id": "cufi_sunday_image",
+                            "type": "image",
+                            "width": "fill",
+                            "imageUrl": "/images/cufi/other/CUFI-Sunday2015.jpg",
+                            "action2": "url::https://events.cufi.org/Login/Login.aspx?ReturnUrl=%2fRegistration.aspx%3fEventCode%3dWA2015&EventCode=WA2015"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "about_us_screen",
+                "type": "page",
+                "header":
+                {
+                    "padding": "0 0 15 0",
+                    "children":
+                    [
+                        {
+                            "type": "applicationBar",
+                            "title": "About Us",
+                            "subtitle": "Christians United for Israel",
+                            "top": 0,
+                            "zIndex": 200,
+                            "leftButton": "back2"
+                        }
+                    ]
+                },
+
+                "body":
+                {
+                    "scrollable": true,
+                    "layout": "vertical",
+                    "children":
+                    [
+                        {
+                            "id": "header_image",
+                            "type": "image",
+                            "width": "fill",
+                            "height": "aspect",
+                            "imageUrl": "/images/cufi/headers/Header_640x240.png",
+                            "aspectRatio": 2.6667
+                        },
+                        {
+
+                            "id": "about_us_html",
+                            "type": "html",
+                            "padding": "15 10 25 10",
+                            "url": "http://brenton.house/resources/cufi/aboutus.html",
+                            "htmlUrl3": "http://brenton.house/resources/cufi/aboutus.html",
+                            "htmlUrl2": "html/cufi/aboutus.html",
+                            "height": "auto",
+                            "width": "fill",
+                            "touchEnabled": false,
+                            "loadingView":
+                            {
+                                "image": "/images/hero/other/loading_black.png",
+                                "opacity": 0.5,
+                                "top": 75
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "pray_for_peace_screen",
+                "type": "page",
+
+                "header":
+                {
+                    "padding": "0 0 15 0",
+                    "children":
+                    [
+                        {
+                            "type": "applicationBar",
+                            "title": "Praying",
+                            "subtitle": "Pray for the Peace of Jerusalem",
+                            "top": 0,
+                            "zIndex": 200,
+                            "leftButton": "back2"
+                        }
+                    ]
+                },
+
+                "body":
+                {
+                    "scrollable": true,
+                    "layout": "vertical",
+                    "children":
+                    [
+                        {
+                            "id": "header_image",
+                            "type": "image",
+                            "width": "fill",
+                            "height": "aspect",
+                            "imageUrl": "/images/cufi/headers/Header_640x240.png",
+                            "aspectRatio": 2.6667
+                        },
+                        {
+
+                            "id": "pray_for_peace_html",
+                            "type": "html",
+                            "padding": "15 10 25 10",
+                             "url": "http://brenton.house/resources/cufi/prayforpeace.html",
+                            "htmlUrl3": "http://brenton.house/resources/cufi/prayforpeace.html",
+                            "htmlUrl2": "html/cufi/prayforpeace.html",
+                            "height": "auto",
+                            "width": "fill",
+                            "touchEnabled": false,
+                            "loadingView":
+                            {
+                                "image": "/images/hero/other/loading_black.png",
+                                "opacity": 0.5,
+                                "top": 75
+                            }
+
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "about_us2_screen",
+                "type": "page",
+                "header":
+                {
+                    "children":
+                    [
+                        {
+                            "type": "applicationBar",
+                            "title": "About Us",
+                            "subtitle2": "Christians United for Israel",
+                            "top": 0,
+                            "zIndex": 200,
+                            "leftButton": "back2"
+                        }
+                    ]
+                },
+
+                "body":
+                {
+                    "scrollable": true,
+                    "layout": "vertical",
+                    "children":
+                    [
+                        {
+                            "id": "header_image",
+                            "type": "image",
+                            "height": "aspect",
+                            "width": "fill",
+                            "imageUrl": "/images/cufi/headers/Header_640x240.png",
+                            "aspectRatio": 2.6667
+                        },
+                        {
+
+                            "id": "about_us_text",
+                            "type": "text",
+                            "padding": "15 8 0 25",
+                            "textAlign": "left",
+                            "titleSize": 14,
+                            "titleText": "Christians United for Israel (CUFI) is the largest pro-Israel organization in the United States with over two million members and one of the leading Christian grassroots movements in the world. We have only 25 staff, but serve over two million members and conduct over 40 pro-Israel events every month.\r\n\r\nStatement of Purpose\r\nThe purpose of Christians United For Israel (CUFI) is to provide a national association through which every pro-Israel church, parachurch organization, ministry or individual in America can speak and act with one voice in support of Israel in matters related to Biblical issues.\r\n\r\nGoals and Objectives\r\nTo educate and build Christian support for Israel throughout America. \r\n\r\nWhile millions of Christians support Israel, there are millions more who do not yet vocally stand up for the Jewish state. It is crucial to educate Christians on the Biblical and moral imperatives to support Israel and to build Christian support for Israel throughout America. CUFI accomplishes these goals through:"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "contact_us_screen",
+                "type": "page",
+                "header":
+                {
+                    "padding": "0 0 15 0",
+                    "children":
+                    [
+                        {
+                            "type": "applicationBar",
+                            "title": "Contact Us",
+                            "subtitle": "Christians United for Israel",
+                            "leftButton": "back2"
+                        }
+                    ]
+                },
+                "footer":
+                {
+                    "children":
+                    [
+                        {
+                            "type": "button",
+                            "titleText": "Call Now",
+                            "backgroundColor": "foregroundColor",
+                            "titleColor": "foregroundColorX",
+                            "width": "fill",
+                            "height": 45,
+                            "action": "dial::210.477.4714"
+                        }
+                    ]
+                },
+                "body":
+                {
+                    "scrollable": true,
+                    "layout": "vertical",
+                    "children":
+                    [
+                        {
+                            "id": "title",
+                            "type": "text",
+                            "titleText": "Mailing Address",
+                            "height": 40,
+                            "width": "fill",
+                            "titleSize": 17,
+                            "textAlign": "center",
+                            "backgroundColor": "foregroundColor",
+                            "titleColor": "foregroundColorX"
+                        },
+                        {
+                            "type": "container",
+                            "id": "address_layer",
+                            "height": "computed",
+                            "layout": "vertical",
+                            "backgroundColor": "foregroundColorX",
+                            "padding": "15 8 15 8",
+                            "childStyle":
+                            {
+                                "type": "text",
+                                "titleColor": "foregroundColor",
+                                "height": 17
+                            },
+                            "children":
+                            [
+                                {
+                                    "titleText": "PO Box 1307"
+                                },
+                                {
+                                    "titleText": "San Antonio, TX 78295-1307"
+                                },
+                                {
+                                    "titleText": "Email:  info@cufi.org"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "title",
+                            "type": "text",
+                            "titleText": "Phone",
+                            "height": 40,
+                            "width": "fill",
+                            "titleSize": 17,
+                            "textAlign": "center",
+                            "backgroundColor": "foregroundColor",
+                            "titleColor": "foregroundColorX"
+                        },
+                        {
+                            "type": "container",
+                            "id": "phone_layer",
+                            "height": "computed",
+                            "layout": "vertical",
+                            "backgroundColor": "foregroundColorX",
+                            "padding": "15 8 15 8",
+                            "action": "dial::210.477.4714",
+                            "childStyle":
+                            {
+                                "type": "text",
+                                "titleColor": "foregroundColor",
+                                "height": 17
+                            },
+                            "children":
+                            [
+                                {
+                                    "titleText": "(210) 477-4714"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "title",
+                            "type": "text",
+                            "titleText": "Fax",
+                            "height": 40,
+                            "width": "fill",
+                            "titleSize": 17,
+                            "textAlign": "center",
+                            "backgroundColor": "foregroundColor",
+                            "titleColor": "foregroundColorX"
+                        },
+                        {
+                            "type": "container",
+                            "id": "fax_layer",
+                            "height": "computed",
+                            "layout": "vertical",
+                            "backgroundColor": "foregroundColorX",
+                            "padding": "15 8 15 8",
+                            "childStyle":
+                            {
+                                "type": "text",
+                                "titleColor": "foregroundColor",
+                                "height": 17
+                            },
+                            "children":
+                            [
+                                {
+                                    "titleText": "(210) 477-4713"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "title",
+                            "type": "text",
+                            "titleText": "Press Relations",
+                            "height": 40,
+                            "width": "fill",
+                            "titleSize": 17,
+                            "textAlign": "center",
+                            "backgroundColor": "foregroundColor",
+                            "titleColor": "foregroundColorX"
+                        },
+                        {
+                            "type": "container",
+                            "id": "press_layer",
+                            "height": "computed",
+                            "layout": "vertical",
+                            "backgroundColor": "foregroundColorX",
+                            "padding": "15 8 15 8",
+                            "action": "email::Inquiry from Mobile User::ari@cufi.org::I would like to request information about:",
+                            "childStyle":
+                            {
+                                "type": "text",
+                                "titleColor": "foregroundColor",
+                                "height": 17
+                            },
+                            "children":
+                            [
+                                {
+                                    "titleText": "Ari Morgenstern"
+                                },
+                                {
+                                    "titleText": "ari@cufi.org"
+                                }
+                            ]
+                        }
+
+                    ]
+                }
+            },
+            {
+                "id": "test_1_screen",
+                "type": "page",
+                "header":
+                {
+                    "children":
+                    [
+                        {
+                            "type": "applicationBar",
+                            "title": "Test 1",
+                            "subtitle": "MobileHero Platform Demo",
+                            "top": 0,
+                            "zIndex": 200,
+                            "leftButton": "back2"
+                        }
+                    ]
+                },
+                "body":
+                {
+                    "children":
+                    [
+                        {
+                            "id": "hello_text",
+                            "type": "text",
+                            "height": 50,
+                            "textAlign": "center",
+                            "titleText": "Hello World 2!"
+                        },
+                        {
+                            "type": "button",
+                            "titleText": "Create Test Alarm",
+                            "action": "createAlarm::pray1::Pray for the Peace of Israel"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "test_image_screen",
+                "type": "page",
+                "header":
+                {
+                    "children":
+                    [
+                        {
+                            "type": "applicationBar",
+                            "title": "Test Image",
+                            "subtitle": "MobileHero Platform Demo",
+                            "top": 0,
+                            "zIndex": 200,
+                            "leftButton": "back2"
+                        }
+                    ]
+                },
+                "body":
+                {
+                    "children":
+                    [
+                        {
+                            "type": "image",
+                            "width2": "90%",
+                            "width": "fill",
+                            "opacity": 0.5,
+                            "imageUrl": "/images/hero/other/redacted_text.png"
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "test_flex_1_screen",
+                "type": "page",
+                "header":
+                {
+                    "children":
+                    [
+                        {
+                            "type": "applicationBar",
+                            "title": "Flexbox Test",
+                            "subtitle": "MobileHero Platform Demo",
+                            "top": 0,
+                            "zIndex": 200,
+                            "leftButton": "back2"
+                        }
+                    ]
+                },
+                "body":
+                {
+                    "scrollable": true,
+                    "children":
+                    [
+                        {
+                            "id": "flexbox_test_1",
+                            "type": "hero/container",
+                            "layout": "flex",
+                            "flex_basis": "20%",
+                            "flex_direction": "row",
+                            "justify_content": "space-around",
+                            "flex_wrap": "wrap",
+                            "flex_padding": "15",
+                            "childStyle":
+                            {
+                                "type": "container",
+                                "flex_grow": 1,
+                                "height": "30%"
+
+                            },
+                            "children":
+                            [
+                                {
+                                    "children":
+                                    [
+                                        {
+                                            "type": "image",
+                                            "imageUrl": "images/hero/icons/falcon_100x100.png",
+                                            "aspectRatio": 1,
+                                            "width": "fill",
+                                            "top": 0,
+                                            "zIndex": 100
+                                        },
+                                        {
+                                            "type": "text",
+                                            "titleText": "Test 111A\nTest111B",
+                                            "titleSize": 20,
+                                            "bottom": 0
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "children":
+                                    [
+                                        {
+                                            "type": "image",
+                                            "imageUrl": "images/hero/icons/falcon_100x100.png",
+                                            "aspectRatio": 1,
+                                            "width": "fill",
+                                            "top": 0,
+                                            "zIndex": 100
+                                        },
+                                        {
+                                            "type": "text",
+                                            "titleText": "Test 222",
+                                            "titleSize": 20,
+                                            "bottom": 0
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "children":
+                                    [
+                                        {
+                                            "type": "image",
+                                            "imageUrl": "images/hero/icons/falcon_100x100.png",
+                                            "aspectRatio": 1,
+                                            "width": "fill",
+                                            "top": 0,
+                                            "zIndex": 100
+                                        },
+                                        {
+                                            "type": "text",
+                                            "titleText": "Test 333",
+                                            "titleSize": 20,
+                                            "bottom": 0
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "children":
+                                    [
+                                        {
+                                            "type": "image",
+                                            "imageUrl": "images/hero/icons/falcon_100x100.png",
+                                            "aspectRatio": 1,
+                                            "width": "fill",
+                                            "top": 0,
+                                            "zIndex": 100
+                                        },
+                                        {
+                                            "type": "text",
+                                            "titleText": "Test 444",
+                                            "titleSize": 20,
+                                            "bottom": 0
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "children":
+                                    [
+                                        {
+                                            "type": "image",
+                                            "imageUrl": "images/hero/icons/falcon_100x100.png",
+                                            "aspectRatio": 1,
+                                            "width": "fill",
+                                            "top": 0,
+                                            "zIndex": 100
+                                        },
+                                        {
+                                            "type": "text",
+                                            "titleText": "Test 555",
+                                            "titleSize": 20,
+                                            "bottom": 0
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "children":
+                                    [
+                                        {
+                                            "type": "image",
+                                            "imageUrl": "images/hero/icons/falcon_100x100.png",
+                                            "aspectRatio": 1,
+                                            "width": "fill",
+                                            "top": 0,
+                                            "zIndex": 100
+                                        },
+                                        {
+                                            "type": "text",
+                                            "titleText": "Test 666",
+                                            "titleSize": 20,
+                                            "bottom": 0
+                                        }
+                                    ]
+
+                                },
+                                {
+                                    "children":
+                                    [
+                                        {
+                                            "type": "image",
+                                            "imageUrl": "images/hero/icons/falcon_100x100.png",
+                                            "aspectRatio": 1,
+                                            "width": "fill",
+                                            "top": 0,
+                                            "zIndex": 100
+                                        },
+                                        {
+                                            "type": "text",
+                                            "titleText": "Test 777",
+                                            "titleSize": 20,
+                                            "bottom": 0
+                                        }
+                                    ]
+
+                                }
+
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "test_flex_2_screen",
+                "type": "page",
+                "header":
+                {
+                    "children":
+                    [
+                        {
+                            "type": "applicationBar",
+                            "title": "Flexbox Test",
+                            "subtitle": "MobileHero Platform Demo",
+                            "top": 0,
+                            "zIndex": 200,
+                            "leftButton": "back2"
+                        }
+                    ]
+                },
+                "body":
+                {
+                    "children":
+                    [
+                        {
+                            "id": "flexbox_test_1",
+                            "type": "hero/container",
+                            "layout": "flex",
+                            "flex_basis": "40%",
+                            "flex_direction": "row",
+                            "justify_content": "space-around",
+                            "flex_wrap": "wrap",
+                            "flex_padding": "15",
+                            "childStyle":
+                            {
+                                "type": "text",
+                                "flex_grow": 1,
+                                "actionTemplate": "nav::screen::image_screen::{{titleText}}",
+                                "borderWidth": 3,
+                                "borderColor": "black",
+                                "height": 50,
+                                "padding":
+                                {
+                                    "top": 17,
+                                    "bottom": 17
+                                }
+                            },
+                            "children":
+                            [
+                                {
+                                    "titleText": "aaa"
+                                },
+                                {
+                                    "titleText": "bbb"
+                                },
+                                {
+                                    "titleText": "ccc"
+                                },
+                                {
+                                    "titleText": "ddd"
+                                },
+                                {
+                                    "titleText": "eee"
+                                },
+                                {
+                                    "titleText": "fff"
+                                },
+                                {
+                                    "titleText": "ggg"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "id": "hello_world_page",
+                "type": "page",
+                "header":
+                {
+                    "children":
+                    [
+                        {
+                            "type": "text",
+                            "titleText": "Hello World Header",
+                            "height": 20,
+                            "textAlign": "center",
+                            "top": 0,
+                            "zIndex": 200
+                        }
+                    ]
+                },
+                "body":
+                {
+                    "children":
+                    [
+                        {
+                            "id": "hello_text",
+                            "type": "text",
+                            "height": 30,
+                            "textAlign": "center",
+                            "titleText": "Hello World Body!"
+                        },
+                        {
+                            "id": "logo",
+                            "type": "image",
+                            "imageUrl": "/images/hero/headers/clouds_640x240.jpg",
+                            "width": "fill",
+                            "zIndex": 100,
+                            "top": 0,
+                            "aspectRatio": 2.6667
+                        }
+                    ]
+                }
+            },
+
+            {
+                "id": "hello_world",
+                "type": "text",
+                "height": 18,
+                "textAlign": "center",
+                "titleText": "Hello World!",
+                "padding": "10"
+            }
+
+        ]
+    }
+}
